@@ -1,0 +1,20 @@
+{
+    "name": "ouranoshong/ali-pay-api",
+    "description": "ali pay api sdk",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ouranoshong",
+            "email": "ouranoshong@outlook.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "AliPay\\": "./src"
+        },
+        "files": ["./src/AopEncrypt.php"]
+    }
+}
