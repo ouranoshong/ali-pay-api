@@ -251,22 +251,7 @@ class AopClient {
 
 
 	protected function logCommunicationError($apiName, $requestUrl, $errorCode, $responseTxt) {
-		$localIp = isset ($_SERVER["SERVER_ADDR"]) ? $_SERVER["SERVER_ADDR"] : "CLI";
-		$logger = new LtLogger;
-		$logger->conf["log_file"] = rtrim(AOP_SDK_WORK_DIR, '\\/') . '/' . "logs/aop_comm_err_" . $this->appId . "_" . date("Y-m-d") . ".log";
-		$logger->conf["separator"] = "^_^";
-		$logData = array(
-			date("Y-m-d H:i:s"),
-			$apiName,
-			$this->appId,
-			$localIp,
-			PHP_OS,
-			$this->alipaySdkVersion,
-			$requestUrl,
-			$errorCode,
-			str_replace("\n", "", $responseTxt)
-		);
-		$logger->log($logData);
+        return true;
 	}
 
     /**
